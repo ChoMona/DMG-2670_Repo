@@ -20,6 +20,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AddScore.cs" t="Include" />
+          <e p="CharacterMover.cs" t="Include" />
           <e p="IntData.cs" t="Include" />
           <e p="Score.cs" t="Include" />
         </e>

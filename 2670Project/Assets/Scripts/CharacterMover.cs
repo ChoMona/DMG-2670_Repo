@@ -8,35 +8,42 @@ public class CharacterMover : MonoBehaviour
     
     private CharacterController controller;
     private Vector3 movement;
-    public float gravity = 9.81f;
-    public float moveSpeed = 3f;
-    //public float fastMoveSpeed;
-    public float jumpForce = 10f;
-    //public int jumpCountMax;
-    
-    void Start()
+
+    public float moveSpeed = 5f, rotateSpeed = 30f, gravity = -9.81f, jumpForce = 10f;
+    private float yVar;
+
+    public int jumpCountMax = 2;
+    private int jumpCount;
+
+   private void Start()
     {
         controller = GetComponent<CharacterController>();
     }
     
-    void Update()
+    private void Update()
     {
-        movement.x = Input.GetAxis("Horizontal")*moveSpeed;
-        
-        if (Input.GetButtonDown("Jump"))
+        var vInput = Input.GetAxis("Vertical")*moveSpeed;
+        movement.Set(vInput,yVar,0);
+
+        var hInput = Input.GetAxis("Horizontal")*Time.deltaTime*rotateSpeed;
+        transform.Rotate(0,hInput,0);
+
+        yVar += gravity * Time.deltaTime;
+
+        if (controller.isGrounded && movement.y < 0)
         {
-            movement.y = jumpForce;
+            yVar = -1f;
+            jumpCount = 0;
         }
 
-        if (controller.isGrounded)
+        if (Input.GetButton("Jump") && jumpCount < jumpCountMax)
         {
-            movement.y = 0;
+            yVar = jumpForce;
+            jumpCount++;
         }
-        else
-        {
-            movement.y -= gravity;
-        }
-        
-        controller.Move(movement*Time.deltaTime);
+
+        movement = transform.TransformDirection(movement);
+        controller.Move(movement * Time.deltaTime);
+
     }
 }

@@ -95,6 +95,7 @@
       <workItem from="1599003667156" duration="3984000" />
       <workItem from="1599019776899" duration="6648000" />
       <workItem from="1599100238587" duration="3967000" />
+      <workItem from="1599668857540" duration="2896000" />
     </task>
     <servers />
   </component>
@@ -119,6 +120,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1599678497185">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824/1920.0.1280.680@1920.0.1280.680" timestamp="1599678497185" />
     <state x="535" y="137" key="RiderGenerateDialog" timestamp="1599021048408">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

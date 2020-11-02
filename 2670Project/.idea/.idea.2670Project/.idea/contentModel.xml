@@ -21,8 +21,12 @@
         <e p="Scripts" t="Include">
           <e p="AddScore.cs" t="Include" />
           <e p="CharacterMover.cs" t="Include" />
+          <e p="FloatData.cs" t="Include" />
           <e p="IntData.cs" t="Include" />
+          <e p="JumpPowerUp.cs" t="Include" />
           <e p="Score.cs" t="Include" />
+          <e p="SpawnPoint.cs" t="Include" />
+          <e p="Vector3Data.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
